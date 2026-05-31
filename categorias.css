@@ -1,0 +1,125 @@
+/* --- Estilos Generales y Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a; 
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* --- Header Estilo Cava --- */
+.header-cava {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.nav-cava a {
+    color: #000000;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.nav-cava a.active {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 4px;
+}
+
+/* --- Contenedor Principal --- */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.titulo-pantalla {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f1f1f1;
+}
+
+/* --- Grid de los Barriles (2x2) --- */
+.grid-barriles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px; 
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- El Botón / Tarjeta del Barril --- */
+.tarjeta-barril {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; 
+    color: inherit;
+    background-color: #262626;
+    padding: 30px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Contenedor de la imagen */
+.contenedor-imagen {
+    width: 180px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.imagen-barril {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.texto-barril {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+/* --- Efectos de Interacción --- */
+.tarjeta-barril:hover {
+    transform: translateY(-8px); 
+    background-color: #333333; 
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2); 
+}
+
+.tarjeta-barril:hover .texto-barril {
+    color: #d4af37; 
+}
+
+/* --- Adaptación para celulares --- */
+@media (max-width: 600px) {
+    .grid-barriles {
+        grid-template-columns: 1fr; 
+    }
+    .header-cava {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+}

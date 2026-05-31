@@ -1,0 +1,343 @@
+/* --- Reset y Estilos Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* --- Header --- */
+.header-cava {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.logo-texto {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #000000;
+}
+
+.nav-cava a {
+    color: #000000;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.nav-cava a.active {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 4px;
+}
+
+/* --- Estructura Sección --- */
+.contenedor-principal {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.encabezado-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.btn-regresar {
+    color: #d4af37; 
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.btn-regresar:hover {
+    color: #ffffff;
+}
+
+.titulo-pantalla {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- CONTENEDOR MUEBLE CON SCROLL INTERNO --- */
+.mueble-scroll-contenedor {
+    max-height: 520px;
+    overflow-y: auto;
+    background-color: #4a3319; 
+    border: 12px solid #332210;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+}
+
+/* Scrollbar personalizada a juego con el mueble claro */
+.mueble-scroll-contenedor::-webkit-scrollbar {
+    width: 8px;
+}
+.mueble-scroll-contenedor::-webkit-scrollbar-track {
+    background: #332210;
+}
+.mueble-scroll-contenedor::-webkit-scrollbar-thumb {
+    background: #73512b;
+    border-radius: 4px;
+}
+
+/* --- GRID DE CELDAS (5 COLUMNAS) --- */
+.estante-madera-blancos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 15px;
+}
+
+/* La celda individual para vino blanco */
+.nicho {
+    background-color: #261a0d; 
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #5e4121; 
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.75);
+}
+
+.nicho:hover {
+    transform: scale(1.04);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 0 15px rgba(212, 175, 55, 0.35);
+    border-color: #80592f;
+}
+
+/* Imagen de la botella de blanco */
+.botella {
+    max-height: 140px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.5));
+    transition: transform 0.2s;
+}
+
+.nicho:hover .botella {
+    transform: translateY(-4px);
+}
+
+.coordenada {
+    position: absolute;
+    bottom: 4px;
+    font-size: 0.7rem;
+    color: #946d42;
+    font-family: monospace;
+}
+
+/* --- VENTANA EMERGENTE (MODAL) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.modal-overlay.mostrar {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* --- LA TARJETA BLANCA --- */
+.tarjeta-informacion {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    width: 90%;
+    max-width: 480px;
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.mostrar .tarjeta-informacion {
+    transform: translateY(0);
+}
+
+.btn-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #888888;
+    cursor: pointer;
+}
+
+.btn-cerrar:hover {
+    color: #000000;
+}
+
+.vino-marca {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.separador {
+    border: none;
+    height: 2px;
+    background-color: #d4af37; 
+    margin: 15px 0;
+}
+
+.datos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.datos-grid p {
+    color: #444444;
+}
+
+.precio {
+    color: #27ae60 !important;
+    font-weight: 600;
+}
+
+.descripcion-bloque {
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.4;
+    background-color: #f7f7f7;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.stock-badge {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.stock-badge strong {
+    color: #d4af37;
+}
+
+/* --- Barra de Búsqueda y Filtros --- */
+.contenedor-herramientas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.caja-buscador {
+    position: relative;
+    flex: 1;
+    min-width: 280px;
+}
+
+.icono-lupa {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+.caja-buscador input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    background-color: #121212;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+.caja-buscador input:focus {
+    outline: none;
+    border-color: #d4af37; 
+}
+
+.grupo-filtros {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-filtro {
+    background-color: #121212;
+    color: #bbb;
+    border: 1px solid #444;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-filtro:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn-filtro.active {
+    background-color: #d4af37; 
+    color: #121212;
+    border-color: #d4af37;
+}
+
+/* --- Celular --- */
+@media (max-width: 850px) {
+    .estante-madera-blancos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .estante-madera-blancos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .header-cava {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

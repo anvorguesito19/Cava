@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cava Virtual - Vinos Rosados</title>
+    <link rel="stylesheet" href="cava_rosados.css">
+</head>
+<body>
+
+    <header class="header-cava">
+        <div class="logo-contenedor">
+            <span class="logo-texto">Cava D. Rubén</span>
+        </div>
+        <nav class="nav-cava">
+            <a href="#">INICIO</a>
+            <a href="#">CALENDARIO</a>
+            <a href="categorias.html" class="active">CAVA VIRTUAL</a>
+        </nav>
+    </header>
+
+    <main class="contenedor-principal">
+        <div class="encabezado-seccion">
+            <a href="categorias.html" class="btn-regresar">← Volver a Categorías</a>
+            <h1 class="titulo-pantalla">Cava Virtual: Vinos Rosados</h1>
+        </div>
+
+        <!-- BARRA DE BÚSQUEDA Y FILTRADO RÁPIDO -->
+<div class="contenedor-herramientas">
+    <!-- Buscador con Lupa -->
+    <div class="caja-buscador">
+        <span class="icono-lupa">🔍</span>
+        <input type="text" id="inputBuscador" placeholder="Buscar por nombre, región o añejado..." onkeyup="filtrarVinos()">
+    </div>
+
+    <!-- Botones de Filtrado Rápido -->
+    <div class="grupo-filtros">
+        <button class="btn-filtro active" onclick="filtrarPorSubcategoria('todos', this)">Todos</button>
+        <button class="btn-filtro" onclick="filtrarPorSubcategoria('dulce', this)">Dulces / Semidulces</button>
+        <button class="btn-filtro" onclick="filtrarPorSubcategoria('seco', this)">Secos</button>
+        <button class="btn-filtro" onclick="filtrarPorSubcategoria('reserva', this)">Reservas / Crianza</button>
+    </div>
+</div>
+        
+        <div class="mueble-scroll-contenedor">
+            <section class="estante-madera-rosados">
+                
+                <div class="nicho rosado" onclick="abrirModal('Casa Madero V Rosado', 'Valle de Parras, México', 'N/A', '12.5%', '750ml', '100% Shiraz. Notas de fresas frescas, sandía y un final cítrico muy refrescante.', '$22.00', '$5.50', '8')">
+                    <img src="recursos/vinorosado1.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">1-A</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Whispering Angel', 'Provenza, Francia', 'N/A', '13.0%', '750ml', 'El rosado más famoso del mundo. Color salmón pálido, notas de frutos rojos sutiles y un toque mineral.', '$42.00', '$10.50', '5')">
+                    <img src="recursos/vinorosado2.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">1-B</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Monte Xanic Rosé', 'Valle de Guadalupe, México', 'N/A', '13.2%', '750ml', 'Mezcla de uvas con excelente volumen en boca, aroma a cerezas y violetas.', '$26.50', '$6.50', '10')">
+                    <img src="recursos/vinorosado3.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">1-C</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('L.A. Cetto Rosado', 'Valle de Guadalupe, México', 'N/A', '11.5%', '750ml', 'Vino joven, ligero, frutal y con un dulzor muy agradable en el paladar.', '$14.00', '$4.00', '15')">
+                    <img src="recursos/vinorosado4.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">1-D</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Beringer White Zinfandel', 'California, USA', 'N/A', '10.5%', '750ml', 'Un clásico semidulce con aromas intensos a frutos del bosque y melón.', '$16.50', '$4.50', '12')">
+                    <img src="recursos/vinorosado5.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">1-E</span>
+                </div>
+
+                <div class="nicho rosado" onclick="abrirModal('Santa Digna Estelado Rosé', 'Valle de Curicó, Chile', '6 meses', '12.0%', '750ml', 'Notas de frutas negras y un fondo cremoso muy elegante.', '$20.00', '$5.00', '9')">
+                    <img src="recursos/vinorosado6.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">2-A</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Monte Xanic Rosé', 'Valle de Guadalupe, México', 'N/A', '13.2%', '750ml', 'Mezcla de uvas con excelente volumen en boca, aroma a cerezas y violetas.', '$26.50', '$6.50', '10')">
+                    <img src="recursos/vinorosado3.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">2-B</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Casa Madero V Rosado', 'Valle de Parras, México', 'N/A', '12.5%', '750ml', '100% Shiraz. Notas de fresas frescas, sandía y un final cítrico muy refrescante.', '$22.00', '$5.50', '8')">
+                    <img src="recursos/vinorosado1.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">2-C</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Beringer White Zinfandel', 'California, USA', 'N/A', '10.5%', '750ml', 'Un clásico semidulce con aromas intensos a frutos del bosque y melón.', '$16.50', '$4.50', '12')">
+                    <img src="recursos/vinorosado5.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">2-D</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Whispering Angel', 'Provenza, Francia', 'N/A', '13.0%', '750ml', 'El rosado más famoso del mundo. Color salmón pálido, notas de frutos rojos sutiles y un toque mineral.', '$42.00', '$10.50', '5')">
+                    <img src="recursos/vinorosado2.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">2-E</span>
+                </div>
+
+                <div class="nicho rosado" onclick="abrirModal('L.A. Cetto Rosado', 'Valle de Guadalupe, México', 'N/A', '11.5%', '750ml', 'Vino joven, ligero, frutal y con un dulzor muy agradable en el paladar.', '$14.00', '$4.00', '15')">
+                    <img src="recursos/vinorosado4.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">3-A</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Santa Digna Estelado Rosé', 'Valle de Curicó, Chile', '6 meses', '12.0%', '750ml', 'Notas de frutas negras y un fondo cremoso muy elegante.', '$20.00', '$5.00', '9')">
+                    <img src="recursos/vinorosado6.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">3-B</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Monte Xanic Rosé', 'Valle de Guadalupe, México', 'N/A', '13.2%', '750ml', 'Mezcla de uvas con excelente volumen en boca, aroma a cerezas y violetas.', '$26.50', '$6.50', '10')">
+                    <img src="recursos/vinorosado3.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">3-C</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Casa Madero V Rosado', 'Valle de Parras, México', 'N/A', '12.5%', '750ml', '100% Shiraz. Notas de fresas frescas, sandía y un final cítrico muy refrescante.', '$22.00', '$5.50', '8')">
+                    <img src="recursos/vinorosado1.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">3-D</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Beringer White Zinfandel', 'California, USA', 'N/A', '10.5%', '750ml', 'Un clásico semidulce con aromas intensos a frutos del bosque y melón.', '$16.50', '$4.50', '12')">
+                    <img src="recursos/vinorosado5.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">3-E</span>
+                </div>
+
+                <div class="nicho rosado" onclick="abrirModal('Whispering Angel', 'Provenza, Francia', 'N/A', '13.0%', '750ml', 'El rosado más famoso del mundo. Color salmón pálido, notas de frutos rojos sutiles y un toque mineral.', '$42.00', '$10.50', '5')">
+                    <img src="recursos/vinorosado2.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">4-A</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('L.A. Cetto Rosado', 'Valle de Guadalupe, México', 'N/A', '11.5%', '750ml', 'Vino joven, ligero, frutal y con un dulzor muy agradable en el paladar.', '$14.00', '$4.00', '15')">
+                    <img src="recursos/vinorosado4.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">4-B</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Santa Digna Estelado Rosé', 'Valle de Curicó, Chile', '6 meses', '12.0%', '750ml', 'Notas de frutas negras y un fondo cremoso muy elegante.', '$20.00', '$5.00', '9')">
+                    <img src="recursos/vinorosado6.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">4-C</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Monte Xanic Rosé', 'Valle de Guadalupe, México', 'N/A', '13.2%', '750ml', 'Mezcla de uvas con excelente volumen en boca, aroma a cerezas y violetas.', '$26.50', '$6.50', '10')">
+                    <img src="recursos/vinorosado3.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">4-D</span>
+                </div>
+                <div class="nicho rosado" onclick="abrirModal('Casa Madero V Rosado', 'Valle de Parras, México', 'N/A', '12.5%', '750ml', '100% Shiraz. Notas de fresas frescas, sandía y un final cítrico muy refrescante.', '$22.00', '$5.50', '8')">
+                    <img src="recursos/vinorosado1.png" alt="Vino Rosado" class="botella">
+                    <span class="coordenada">4-E</span>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <div id="modalVino" class="modal-overlay" onclick="cerrarModalExterno(event)">
+        <div class="tarjeta-informacion">
+            <button class="btn-cerrar" onclick="cerrarModal()">×</button>
+            <div class="tarjeta-contenido">
+                <h2 id="modalMarca" class="vino-marca">Marca del Vino</h2>
+                <hr class="separador">
+                <div class="datos-grid">
+                    <p><strong>Región:</strong> <span id="modalRegion">---</span></p>
+                    <p><strong>Añejado:</strong> <span id="modalAnejado">---</span></p>
+                    <p><strong>Alcohol:</strong> <span id="modalAlcohol">---</span></p>
+                    <p><strong>Volumen:</strong> <span id="modalVolumen">---</span></p>
+                    <p><strong>Precio Botella:</strong> <span id="modalPrecioBotella" class="precio">---</span></p>
+                    <p><strong>Precio Copa:</strong> <span id="modalPrecioCopa" class="precio">---</span></p>
+                </div>
+                <p class="descripcion-bloque"><strong>Descripción:</strong> <br><span id="modalDescripcion">---</span></p>
+                <div class="stock-badge">
+                    Existencias en Cava: <strong id="modalStock">0</strong> botellas
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    let subcategoriaActual = 'todos';
+
+    function abrirModal(marca, region, anejado, alcohol, volumen, descripcion, precioB, precioC, stock) {
+        document.getElementById('modalMarca').innerText = marca;
+        document.getElementById('modalRegion').innerText = region;
+        document.getElementById('modalAnejado').innerText = anejado;
+        document.getElementById('modalAlcohol').innerText = alcohol;
+        document.getElementById('modalVolumen').innerText = volumen;
+        document.getElementById('modalDescripcion').innerText = descripcion;
+        document.getElementById('modalPrecioBotella').innerText = precioB;
+        document.getElementById('modalPrecioCopa').innerText = precioC;
+        document.getElementById('modalStock').innerText = stock;
+        
+        document.getElementById('modalVino').classList.add('mostrar');
+    }
+
+    function cerrarModal() {
+        document.getElementById('modalVino').classList.remove('mostrar');
+    }
+
+    function cerrarModalExterno(event) {
+        if (event.target.id === 'modalVino') {
+            cerrarModal();
+        }
+    }
+
+    // LÓGICA DE FILTRADO Y BÚSQUEDA EN TIEMPO REAL
+    function filtrarVinos() {
+        const textoBusqueda = document.getElementById('inputBuscador').value.toLowerCase();
+        const nichos = document.querySelectorAll('.estante-madera-rosados .nicho');
+
+        nichos.forEach(nicho => {
+            const textoNicho = nicho.textContent.toLowerCase();
+            const atributosVino = nicho.getAttribute('onclick').toLowerCase();
+            const informacionCompleta = textoNicho + " " + atributosVino;
+            let coincideSubcategoria = false;
+            if (subcategoriaActual === 'todos') {
+                coincideSubcategoria = true;
+            } else if (subcategoriaActual === 'dulce' && (informacionCompleta.includes('dulce') || informacionCompleta.includes('moscatel') || informacionCompleta.includes('afrutado'))) {
+                coincideSubcategoria = true;
+            } else if (subcategoriaActual === 'seco' && (informacionCompleta.includes('seco') || informacionCompleta.includes('brut') || informacionCompleta.includes('acidez'))) {
+                coincideSubcategoria = true;
+            } else if (subcategoriaActual === 'reserva' && (informacionCompleta.includes('reserva') || informacionCompleta.includes('crianza') || informacionCompleta.includes('meses'))) {
+                coincideSubcategoria = true;
+            }
+
+            const coincideTexto = informacionCompleta.includes(textoBusqueda);
+
+            // Si pasa ambos filtros, se muestra. Si no, se oculta 
+            if (coincideTexto && coincideSubcategoria) {
+                nicho.style.display = "flex";
+                nicho.style.opacity = "1";
+                nicho.style.transform = "scale(1)";
+            } else {
+                nicho.style.display = "none";
+                nicho.style.opacity = "0";
+            }
+        });
+    }
+
+    function filtrarPorSubcategoria(subcategoria, botonActivo) {
+        subcategoriaActual = subcategoria;
+        
+        document.querySelectorAll('.btn-filtro').forEach(btn => btn.classList.remove('active'));
+        botonActivo.classList.add('active');
+        filtrarVinos();
+    }
+</script>
+</body>
+</html>

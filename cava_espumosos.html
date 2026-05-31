@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cava Virtual - Vinos Espumosos</title>
+    <link rel="stylesheet" href="cava_espumosos.css">
+</head>
+<body>
+
+    <header class="header-cava">
+        <div class="logo-contenedor">
+            <span class="logo-texto">Cava D. Rubén</span>
+        </div>
+        <nav class="nav-cava">
+            <a href="#">INICIO</a>
+            <a href="#">CALENDARIO</a>
+            <a href="categorias.html" class="active">CAVA VIRTUAL</a>
+        </nav>
+    </header>
+
+    <main class="contenedor-principal">
+        <div class="encabezado-seccion">
+            <a href="categorias.html" class="btn-regresar">← Volver a Categorías</a>
+            <h1 class="titulo-pantalla">Cava Virtual: Vinos Espumosos</h1>
+        </div>
+
+        <!-- BARRA DE BÚSQUEDA Y FILTRADO RÁPIDO -->
+<div class="contenedor-herramientas">
+    <!-- Buscador con Lupa -->
+    <div class="caja-buscador">
+        <span class="icono-lupa">🔍</span>
+        <input type="text" id="inputBuscador" placeholder="Buscar por nombre, región, uva o notas de cata..." onkeyup="filtrarVinos()">
+    </div>
+
+    <!-- Botones de Filtrado Rápido -->
+    <div class="grupo-filtros">
+        <button class="btn-filtro active" onclick="filtrarPorSubcategoria('todos', this)">Todos</button>
+        <button class="btn-filtro" onclick="filtrarPorSubcategoria('dulce', this)">Dulces / Semidulces</button>
+        <button class="btn-filtro" onclick="filtrarPorSubcategoria('seco', this)">Secos</button>
+        <button class="btn-filtro" onclick="filtrarPorSubcategoria('reserva', this)">Reservas / Crianza</button>
+    </div>
+</div>
+        
+        <div class="mueble-scroll-contenedor">
+        <section class="estante-madera-espumosos">
+            
+            <div class="nicho" onclick="abrirModal('Moët & Chandon', 'Champagne, Francia', 'N/A', '12.5%', '750ml', 'Notas de manzana verde y cítricos con una efervescencia vibrante.', '$45.00', '$12.00', '4')">
+                <img src="recursos/vinoespumoso1.png" alt="Vino Espumoso" class="botella">
+                <span class="coordenada">1-A</span>
+            </div>
+
+            <div class="nicho" onclick="abrirModal('Marqués de Riscal Sparkling', 'Rioja, España', '12 meses', '12.0%', '750ml', 'Burbuja fina, fresco y con sutiles notas florales.', '$28.50', '$7.00', '3')">
+                <img src="recursos/vinoespumoso2.png" alt="Vino Espumoso" class="botella">
+                <span class="coordenada">1-B</span>
+            </div>
+
+            <div class="nicho" onclick="abrirModal('Prosecco Valdobbiadene', 'Véneto, Italia', 'N/A', '11.5%', '750ml', 'Frutal y ligero, ideal para maridajes veraniegos.', '$22.00', '$6.00', '3')">
+                <img src="recursos/vinoespumoso3.png" alt="Vino Espumoso" class="botella">
+                <span class="coordenada">1-C</span>
+            </div>
+
+            <div class="nicho" onclick="abrirModal('Dom Pérignon Vintage', 'Champagne, Francia', '24 meses', '12.5%', '750ml', 'Estructura compleja, frutos secos y un final tostado elegante.', '$85.00', '$22.50', '2')">
+                <img src="recursos/vinoespumoso4.png" alt="Vino Espumoso" class="botella">
+                <span class="coordenada">1-D</span>
+            </div>
+
+            <div class="nicho" onclick="abrirModal('Freixenet Cordon Negro', 'Cataluña, España', '18 meses', '12.0%', '750ml', 'Muy refrescante, predominio de frutas tropicales.', '$18.00', '$5.00', '4')">
+                <img src="recursos/vinoespumoso5.png" alt="Vino Espumoso" class="botella">
+                <span class="coordenada">2-A</span>
+            </div>
+
+            <div class="nicho" onclick="abrirModal('Astoria Luxury Gold', 'Véneto, Italia', 'N/A', '11.0%', '750ml', 'Dulzor equilibrado, notas de miel y melocotón.', '$32.00', '$8.50', '2')">
+                <img src="recursos/vinoespumoso6.png" alt="Vino Espumoso" class="botella">
+                <span class="coordenada">2-B</span>
+            </div>
+
+            <div class="nicho" onclick="abrirModal('Moët & Chandon', 'Champagne, Francia', 'N/A', '12.5%', '750ml', 'Notas de manzana verde y cítricos con una efervescencia vibrante.', '$45.00', '$12.00', '4')">
+                <img src="recursos/vinoespumoso1.png" alt="Vino Espumoso" class="botella">
+                <span class="coordenada">2-C</span>
+            </div>
+
+            <div class="nicho" onclick="abrirModal('Marqués de Riscal Sparkling', 'Rioja, España', '12 meses', '12.0%', '750ml', 'Burbuja fina, fresco y con sutiles notas florales.', '$28.50', '$7.00', '3')">
+                <img src="recursos/vinoespumoso2.png" alt="Vino Espumoso" class="botella">
+                <span class="coordenada">2-D</span>
+            </div>
+
+            <div class="nicho" onclick="abrirModal('Prosecco Valdobbiadene', 'Véneto, Italia', 'N/A', '11.5%', '750ml', 'Frutal y ligero, ideal para maridajes veraniegos.', '$22.00', '$6.00', '3')">
+                <img src="recursos/vinoespumoso3.png" alt="Vino Espumoso" class="botella">
+                <span class="coordenada">3-A</span>
+            </div>
+
+            <div class="nicho" onclick="abrirModal('Dom Pérignon Vintage', 'Champagne, Francia', '24 meses', '12.5%', '750ml', 'Estructura compleja, frutos secos y un final tostado elegante.', '$85.00', '$22.50', '2')">
+                <img src="recursos/vinoespumoso4.png" alt="Vino Espumoso" class="botella">
+                <span class="coordenada">3-B</span>
+            </div>
+
+            <div class="nicho" onclick="abrirModal('Freixenet Cordon Negro', 'Cataluña, España', '18 meses', '12.0%', '750ml', 'Muy refrescante, predominio de frutas tropicales.', '$18.00', '$5.00', '4')">
+                <img src="recursos/vinoespumoso5.png" alt="Vino Espumoso" class="botella">
+                <span class="coordenada">3-C</span>
+            </div>
+
+            <div class="nicho" onclick="abrirModal('Astoria Luxury Gold', 'Véneto, Italia', 'N/A', '11.0%', '750ml', 'Dulzor equilibrado, notas de miel y melocotón.', '$32.00', '$8.50', '2')">
+                <img src="recursos/vinoespumoso6.png" alt="Vino Espumoso" class="botella">
+                <span class="coordenada">3-D</span>
+            </div>
+
+        </section>
+        </div>
+    </main>
+
+    <div id="modalVino" class="modal-overlay" onclick="cerrarModalExterno(event)">
+        <div class="tarjeta-informacion">
+            <button class="btn-cerrar" onclick="cerrarModal()">×</button>
+            <div class="tarjeta-contenido">
+                <h2 id="modalMarca" class="vino-marca">Marca del Vino</h2>
+                <hr class="separador">
+                <div class="datos-grid">
+                    <p><strong>Región:</strong> <span id="modalRegion">---</span></p>
+                    <p><strong>Añejado:</strong> <span id="modalAnejado">---</span></p>
+                    <p><strong>Alcohol:</strong> <span id="modalAlcohol">---</span></p>
+                    <p><strong>Volumen:</strong> <span id="modalVolumen">---</span></p>
+                    <p><strong>Precio Botella:</strong> <span id="modalPrecioBotella" class="precio">---</span></p>
+                    <p><strong>Precio Copa:</strong> <span id="modalPrecioCopa" class="precio">---</span></p>
+                </div>
+                <p class="descripcion-bloque"><strong>Descripción:</strong> <br><span id="modalDescripcion">---</span></p>
+                <div class="stock-badge">
+                    Existencias en Cava: <strong id="modalStock">0</strong> botellas
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    let subcategoriaActual = 'todos';
+
+    function abrirModal(marca, region, anejado, alcohol, volumen, descripcion, precioB, precioC, stock) {
+        document.getElementById('modalMarca').innerText = marca;
+        document.getElementById('modalRegion').innerText = region;
+        document.getElementById('modalAnejado').innerText = anejado;
+        document.getElementById('modalAlcohol').innerText = alcohol;
+        document.getElementById('modalVolumen').innerText = volumen;
+        document.getElementById('modalDescripcion').innerText = descripcion;
+        document.getElementById('modalPrecioBotella').innerText = precioB;
+        document.getElementById('modalPrecioCopa').innerText = precioC;
+        document.getElementById('modalStock').innerText = stock;
+        
+        document.getElementById('modalVino').classList.add('mostrar');
+    }
+
+    function cerrarModal() {
+        document.getElementById('modalVino').classList.remove('mostrar');
+    }
+
+    function cerrarModalExterno(event) {
+        if (event.target.id === 'modalVino') {
+            cerrarModal();
+        }
+    }
+
+    // LÓGICA DE FILTRADO Y BÚSQUEDA EN TIEMPO REAL
+    function filtrarVinos() {
+        const textoBusqueda = document.getElementById('inputBuscador').value.toLowerCase();
+        const nichos = document.querySelectorAll('.estante-madera-espumosos .nicho');
+
+        nichos.forEach(nicho => {
+            const textoNicho = nicho.textContent.toLowerCase();
+            const atributosVino = nicho.getAttribute('onclick').toLowerCase();
+            const informacionCompleta = textoNicho + " " + atributosVino;
+            let coincideSubcategoria = false;
+            if (subcategoriaActual === 'todos') {
+                coincideSubcategoria = true;
+            } else if (subcategoriaActual === 'dulce' && (informacionCompleta.includes('dulce') || informacionCompleta.includes('moscatel') || informacionCompleta.includes('afrutado'))) {
+                coincideSubcategoria = true;
+            } else if (subcategoriaActual === 'seco' && (informacionCompleta.includes('seco') || informacionCompleta.includes('brut') || informacionCompleta.includes('acidez'))) {
+                coincideSubcategoria = true;
+            } else if (subcategoriaActual === 'reserva' && (informacionCompleta.includes('reserva') || informacionCompleta.includes('crianza') || informacionCompleta.includes('meses'))) {
+                coincideSubcategoria = true;
+            }
+
+            const coincideTexto = informacionCompleta.includes(textoBusqueda);
+
+            // Si pasa ambos filtros, se muestra. Si no, se oculta 
+            if (coincideTexto && coincideSubcategoria) {
+                nicho.style.display = "flex";
+                nicho.style.opacity = "1";
+                nicho.style.transform = "scale(1)";
+            } else {
+                nicho.style.display = "none";
+                nicho.style.opacity = "0";
+            }
+        });
+    }
+
+    function filtrarPorSubcategoria(subcategoria, botonActivo) {
+        subcategoriaActual = subcategoria;
+        
+        document.querySelectorAll('.btn-filtro').forEach(btn => btn.classList.remove('active'));
+        botonActivo.classList.add('active');
+        filtrarVinos();
+    }
+</script>
+</body>
+</html>

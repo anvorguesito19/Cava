@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cava Virtual - Vinos Tintos</title>
+    <link rel="stylesheet" href="cava_tintos.css">
+</head>
+<body>
+
+    <header class="header-cava">
+        <div class="logo-contenedor">
+            <span class="logo-texto">Cava D. Rubén</span>
+        </div>
+        <nav class="nav-cava">
+            <a href="#">INICIO</a>
+            <a href="#">CALENDARIO</a>
+            <a href="categorias.html" class="active">CAVA VIRTUAL</a>
+        </nav>
+    </header>
+
+    <main class="contenedor-principal">
+        <div class="encabezado-seccion">
+            <a href="categorias.html" class="btn-regresar">← Volver a Categorías</a>
+            <h1 class="titulo-pantalla">Cava Virtual: Vinos Tintos</h1>
+        </div>
+        
+        <!-- BARRA DE BÚSQUEDA Y FILTRADO RÁPIDO -->
+<div class="contenedor-herramientas">
+    <!-- Buscador con Lupa -->
+    <div class="caja-buscador">
+        <span class="icono-lupa">🔍</span>
+        <input type="text" id="inputBuscador" placeholder="Buscar por nombre, región, uva o notas de cata..." onkeyup="filtrarVinos()">
+    </div>
+
+    <!-- Botones de Filtrado Rápido -->
+    <div class="grupo-filtros">
+        <button class="btn-filtro active" onclick="filtrarPorSubcategoria('todos', this)">Todos</button>
+        <button class="btn-filtro" onclick="filtrarPorSubcategoria('dulce', this)">Dulces / Semidulces</button>
+        <button class="btn-filtro" onclick="filtrarPorSubcategoria('seco', this)">Secos</button>
+        <button class="btn-filtro" onclick="filtrarPorSubcategoria('reserva', this)">Reservas / Crianza</button>
+    </div>
+</div>
+
+        <div class="mueble-scroll-contenedor">
+            <section class="estante-madera-tintos">
+                
+                <div class="nicho tinto" onclick="abrirModal('Marqués de Riscal Reserva', 'Rioja, España', '24 meses', '14.5%', '750ml', 'Roble francés, taninos suaves con notas de frutos rojos maduros.', '$28.50', '$6.50', '12')">
+                    <img src="recursos/vinotinto1.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">1-A</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Casillero del Diablo', 'Valle Central, Chile', '12 meses', '13.5%', '750ml', 'Cuerpo medio, notas de chocolate negro y vainilla tostada.', '$18.00', '$4.50', '24')">
+                    <img src="recursos/vinotinto2.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">1-B</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Monte Xanic Calixa', 'Valle de Guadalupe, México', '9 meses', '13.8%', '750ml', 'Excelente acidez, notas de pimienta e higos.', '$25.00', '$6.00', '18')">
+                    <img src="recursos/vinotinto3.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">1-C</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Catena Zapata Malbec', 'Mendoza, Argentina', '14 meses', '14.0%', '750ml', 'Gran cuerpo, notas de ciruela, pasas y un toque especiado.', '$35.00', '$8.00', '15')">
+                    <img src="recursos/vinotinto4.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">1-D</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Protos Crianza', 'Ribera del Duero, España', '12 meses', '14.2%', '750ml', 'Fruta negra madura, madera bien integrada y final persistente.', '$32.00', '$7.50', '10')">
+                    <img src="recursos/vinotinto5.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">1-E</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Sangre de Toro', 'Cataluña, España', '6 meses', '13.5%', '750ml', 'Cálido, con notas de regaliz y fondo frutal silvestre.', '$15.50', '$4.00', '30')">
+                    <img src="recursos/vinotinto6.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">1-F</span>
+                </div>
+
+                <div class="nicho tinto" onclick="abrirModal('Monte Xanic Calixa', 'Valle de Guadalupe, México', '9 meses', '13.8%', '750ml', 'Excelente acidez, notas de pimienta e higos.', '$25.00', '$6.00', '18')">
+                    <img src="recursos/vinotinto3.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">2-A</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Marqués de Riscal Reserva', 'Rioja, España', '24 meses', '14.5%', '750ml', 'Roble francés, taninos suaves con notas de frutos rojos maduros.', '$28.50', '$6.50', '12')">
+                    <img src="recursos/vinotinto1.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">2-B</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Sangre de Toro', 'Cataluña, España', '6 meses', '13.5%', '750ml', 'Cálido, con notas de regaliz y fondo frutal silvestre.', '$15.50', '$4.00', '30')">
+                    <img src="recursos/vinotinto6.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">2-C</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Casillero del Diablo', 'Valle Central, Chile', '12 meses', '13.5%', '750ml', 'Cuerpo medio, notas de chocolate negro y vainilla tostada.', '$18.00', '$4.50', '24')">
+                    <img src="recursos/vinotinto2.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">2-D</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Catena Zapata Malbec', 'Mendoza, Argentina', '14 meses', '14.0%', '750ml', 'Gran cuerpo, notas de ciruela, pasas y un toque especiado.', '$35.00', '$8.00', '15')">
+                    <img src="recursos/vinotinto4.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">2-E</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Protos Crianza', 'Ribera del Duero, España', '12 meses', '14.2%', '750ml', 'Fruta negra madura, madera bien integrada y final persistente.', '$32.00', '$7.50', '10')">
+                    <img src="recursos/vinotinto5.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">2-F</span>
+                </div>
+
+                <div class="nicho tinto" onclick="abrirModal('Casillero del Diablo', 'Valle Central, Chile', '12 meses', '13.5%', '750ml', 'Cuerpo medio, notas de chocolate negro y vainilla tostada.', '$18.00', '$4.50', '24')">
+                    <img src="recursos/vinotinto2.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">3-A</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Catena Zapata Malbec', 'Mendoza, Argentina', '14 meses', '14.0%', '750ml', 'Gran cuerpo, notas de ciruela, pasas y un toque especiado.', '$35.00', '$8.00', '15')">
+                    <img src="recursos/vinotinto4.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">3-B</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Marqués de Riscal Reserva', 'Rioja, España', '24 meses', '14.5%', '750ml', 'Roble francés, taninos suaves con notas de frutos rojos maduros.', '$28.50', '$6.50', '12')">
+                    <img src="recursos/vinotinto1.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">3-C</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Sangre de Toro', 'Cataluña, España', '6 meses', '13.5%', '750ml', 'Cálido, con notas de regaliz y fondo frutal silvestre.', '$15.50', '$4.00', '30')">
+                    <img src="recursos/vinotinto6.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">3-D</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Protos Crianza', 'Ribera del Duero, España', '12 meses', '14.2%', '750ml', 'Fruta negra madura, madera bien integrada y final persistente.', '$32.00', '$7.50', '10')">
+                    <img src="recursos/vinotinto5.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">3-E</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Monte Xanic Calixa', 'Valle de Guadalupe, México', '9 meses', '13.8%', '750ml', 'Excelente acidez, notas de pimienta e higos.', '$25.00', '$6.00', '18')">
+                    <img src="recursos/vinotinto3.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">3-F</span>
+                </div>
+
+                <div class="nicho tinto" onclick="abrirModal('Protos Crianza', 'Ribera del Duero, España', '12 meses', '14.2%', '750ml', 'Fruta negra madura, madera bien integrada y final persistente.', '$32.00', '$7.50', '10')">
+                    <img src="recursos/vinotinto5.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">4-A</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('vinotinto1', 'Rioja, España', '24 meses', '14.5%', '750ml', 'Roble francés, taninos suaves con notas de frutos rojos maduros.', '$28.50', '$6.50', '12')">
+                    <img src="recursos/vinotinto1.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">4-B</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Casillero del Diablo', 'Valle Central, Chile', '12 meses', '13.5%', '750ml', 'Cuerpo medio, notas de chocolate negro y vainilla tostada.', '$18.00', '$4.50', '24')">
+                    <img src="recursos/vinotinto2.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">4-C</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Monte Xanic Calixa', 'Valle de Guadalupe, México', '9 meses', '13.8%', '750ml', 'Excelente acidez, notas de pimienta e higos.', '$25.00', '$6.00', '18')">
+                    <img src="recursos/vinotinto3.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">4-D</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Catena Zapata Malbec', 'Mendoza, Argentina', '14 meses', '14.0%', '750ml', 'Gran cuerpo, notas de ciruela, pasas y un toque especiado.', '$35.00', '$8.00', '15')">
+                    <img src="recursos/vinotinto4.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">4-E</span>
+                </div>
+                <div class="nicho tinto" onclick="abrirModal('Sangre de Toro', 'Cataluña, España', '6 meses', '13.5%', '750ml', 'Cálido, con notas de regaliz y fondo frutal silvestre.', '$15.50', '$4.00', '30')">
+                    <img src="recursos/vinotinto6.png" alt="Vino Tinto" class="botella">
+                    <span class="coordenada">4-F</span>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <div id="modalVino" class="modal-overlay" onclick="cerrarModalExterno(event)">
+        <div class="tarjeta-informacion">
+            <button class="btn-cerrar" onclick="cerrarModal()">×</button>
+            <div class="tarjeta-contenido">
+                <h2 id="modalMarca" class="vino-marca">Marca del Vino</h2>
+                <hr class="separador">
+                <div class="datos-grid">
+                    <p><strong>Región:</strong> <span id="modalRegion">---</span></p>
+                    <p><strong>Añejado:</strong> <span id="modalAnejado">---</span></p>
+                    <p><strong>Alcohol:</strong> <span id="modalAlcohol">---</span></p>
+                    <p><strong>Volumen:</strong> <span id="modalVolumen">---</span></p>
+                    <p><strong>Precio Botella:</strong> <span id="modalPrecioBotella" class="precio">---</span></p>
+                    <p><strong>Precio Copa:</strong> <span id="modalPrecioCopa" class="precio">---</span></p>
+                </div>
+                <p class="descripcion-bloque"><strong>Descripción:</strong> <br><span id="modalDescripcion">---</span></p>
+                <div class="stock-badge">
+                    Existencias en Cava: <strong id="modalStock">0</strong> botellas
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    let subcategoriaActual = 'todos';
+
+    function abrirModal(marca, region, anejado, alcohol, volumen, descripcion, precioB, precioC, stock) {
+        document.getElementById('modalMarca').innerText = marca;
+        document.getElementById('modalRegion').innerText = region;
+        document.getElementById('modalAnejado').innerText = anejado;
+        document.getElementById('modalAlcohol').innerText = alcohol;
+        document.getElementById('modalVolumen').innerText = volumen;
+        document.getElementById('modalDescripcion').innerText = descripcion;
+        document.getElementById('modalPrecioBotella').innerText = precioB;
+        document.getElementById('modalPrecioCopa').innerText = precioC;
+        document.getElementById('modalStock').innerText = stock;
+        
+        document.getElementById('modalVino').classList.add('mostrar');
+    }
+
+    function cerrarModal() {
+        document.getElementById('modalVino').classList.remove('mostrar');
+    }
+
+    function cerrarModalExterno(event) {
+        if (event.target.id === 'modalVino') {
+            cerrarModal();
+        }
+    }
+
+    // LÓGICA DE FILTRADO Y BÚSQUEDA EN TIEMPO REAL
+    function filtrarVinos() {
+        const textoBusqueda = document.getElementById('inputBuscador').value.toLowerCase();
+        const nichos = document.querySelectorAll('.estante-madera-tintos .nicho');
+
+        nichos.forEach(nicho => {
+            const textoNicho = nicho.textContent.toLowerCase();
+            const atributosVino = nicho.getAttribute('onclick').toLowerCase();
+            const informacionCompleta = textoNicho + " " + atributosVino;
+            let coincideSubcategoria = false;
+            if (subcategoriaActual === 'todos') {
+                coincideSubcategoria = true;
+            } else if (subcategoriaActual === 'dulce' && (informacionCompleta.includes('dulce') || informacionCompleta.includes('moscatel') || informacionCompleta.includes('afrutado'))) {
+                coincideSubcategoria = true;
+            } else if (subcategoriaActual === 'seco' && (informacionCompleta.includes('seco') || informacionCompleta.includes('brut') || informacionCompleta.includes('acidez'))) {
+                coincideSubcategoria = true;
+            } else if (subcategoriaActual === 'reserva' && (informacionCompleta.includes('reserva') || informacionCompleta.includes('crianza') || informacionCompleta.includes('meses'))) {
+                coincideSubcategoria = true;
+            }
+
+            const coincideTexto = informacionCompleta.includes(textoBusqueda);
+
+            // Si pasa ambos filtros, se muestra. Si no, se oculta 
+            if (coincideTexto && coincideSubcategoria) {
+                nicho.style.display = "flex";
+                nicho.style.opacity = "1";
+                nicho.style.transform = "scale(1)";
+            } else {
+                nicho.style.display = "none";
+                nicho.style.opacity = "0";
+            }
+        });
+    }
+
+    function filtrarPorSubcategoria(subcategoria, botonActivo) {
+        subcategoriaActual = subcategoria;
+        
+        document.querySelectorAll('.btn-filtro').forEach(btn => btn.classList.remove('active'));
+        botonActivo.classList.add('active');
+        filtrarVinos();
+    }
+</script>
+</body>
+</html>
